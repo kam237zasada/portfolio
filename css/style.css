@@ -1,10 +1,38 @@
 * {margin:0;
 padding:0;}
 
-.naglowek {
+body {
+    
+    background-color: #eee;
+    
+}
+.content {
+    background-image: url("images/background.jpg");
+    margin: 0 10% 0 10%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+div {
+    font-family: "Courier New", serif;
+}
+
+.section_header {
+    font-size: 45px;
+    color: #202020;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    
+} 
+.header {
     width: 100%;
     height: 40px;
-    position: relative;
+    position: sticky;
+    top: 0px;
+    background-color: red;
   
     
     
@@ -26,9 +54,7 @@ padding:0;}
 
 .button {
     
-  
     font-size: 16px;
-    font-family: "Courier New", sans-serif;
     font-weight: bold;
     max-width: 80px;
     
@@ -37,9 +63,8 @@ padding:0;}
 }
 .container_icons {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-    position:absolute;
+    position: absolute;
     top: 10px;
     right: 20px;
 
@@ -67,3 +92,121 @@ padding:0;}
     background-image: url("images/instagram.png");
     background-size: contain;
 }
+
+
+
+
+.welcome_image {
+   
+    height: 450px;
+    background-image: url("images/welcome.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+   
+    
+}
+
+
+    
+
+.textbox1 {
+    transform: translateY(100px);
+    
+}
+
+.textbox2 {
+    transform: translateY(300px);
+    background-color: silver;
+
+}
+
+
+
+#title {
+    font-size: 70px;
+    color: silver;
+    font-family: "Helvetica", sans-serif;
+    text-align: center;
+    
+}
+#title_2 {
+    font-size: 40px;
+    color: gold;
+    font-family: "Helvetica", sans-serif;
+    text-align: center;
+    
+}
+
+.aboutme_box {
+    margin: 20px;
+    padding: 10px;
+    border: 3px solid black;
+    background-color: white;
+    width: 50%;
+    height: 200px;
+    display: flex;
+    
+    
+}
+.personal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    grid-gap: 5px;
+    
+    
+    
+    
+}
+.personal > div {
+    font-weight: bold;
+    font-family: "Helvetica", sans-serif;
+    color: black;
+
+}
+.personal .second {
+    color: green;
+    font-family: "Helvetica", sans-serif;
+
+}
+
+
+
+.description {
+    
+    
+
+
+
+}
+
+.photo {
+    width: 100%;
+    height: 150px; 
+    background-image: url("images/photo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    align-self: center;
+    
+
+    
+    
+    order: -1;
+    
+    
+    
+}
+
+.gallery_box {
+    margin: 20px;
+    padding: 10px;
+    border: 3px solid black;
+    background-color: white;
+    
+    height: 400px;
+    display: flex;
+
+}
+
