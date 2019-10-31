@@ -15,8 +15,8 @@ body {
     background-repeat: no-repeat;
 }
 
-div {
-    font-family: "Courier New", serif;
+section {
+    margin-bottom: 50px;
 }
 
 .section_header {
@@ -33,11 +33,11 @@ div {
     position: sticky;
     top: 0px;
     background-color: red;
-  
-    
-    
 }
 
+div {
+    font-family: "Courier New", serif;
+}
 .container_buttons {
     display: grid;
     grid-gap: 20px;
@@ -139,21 +139,25 @@ div {
 }
 
 .aboutme_box {
-    margin: 20px;
+    margin-left: 15%;
     padding: 10px;
     border: 3px solid black;
     background-color: white;
-    width: 50%;
-    height: 200px;
-    display: flex;
     
+    
+    display: flex;
+    width: 70%;
+    flex-wrap:wrap;
+    justify-content: space-around;
+
     
 }
 .personal {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    width: 220px;
     
-    grid-gap: 5px;
+    flex: 100%, 1, 1;
     
     
     
@@ -170,43 +174,143 @@ div {
     font-family: "Helvetica", sans-serif;
 
 }
-
-
-
 .description {
     
-    
-
-
-
+    text-align: justify;
+    align-self: stretch;
+    border: 2px green solid;
+    height: 200px;
+    width: 300px;
+    flex: 100%, 1, 1;
+    word-wrap: break-word;
 }
 
+
 .photo {
-    width: 100%;
+    width: 100px;
     height: 150px; 
     background-image: url("images/photo.png");
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 20px;
     align-self: center;
-    
-
-    
-    
     order: -1;
-    
-    
+    flex: 100%, 1, 1;
     
 }
 
 .gallery_box {
     margin: 20px;
     padding: 10px;
-    border: 3px solid black;
-    background-color: white;
+    
     
     height: 400px;
     display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+   
+
+}
+
+.photos {
+   
+width: 45%;
+min-width: 200px;
+align-self: center;
+flex-grow: 1;
+
+
+}
+
+.photos img {
+    width: 90%;
+    height: auto;
+    position:relative;
+    left: 5%;
+    
+   
+
+}
+
+.videos {
+    
+    width: 45%;
+    min-width: 200px;
+    align-self: center;
+    flex-grow:1;
+    
+}
+.videos img {
+    width: 90%;
+    height: auto;
+    position:relative;
+    left: 5%;
+   
+    
+   
+
+}
+#photos {
+    font-family: "Helvetica", sans-serif;
+    font-size: 30px;
+    color: green;
+    text-align: center;
+    
+    width: 100%;
+    
+    
+    background-color: yellow;
+    border: 2px green solid;
+    box-sizing: border-box;
+
+}
+#videos {
+    font-family: "Helvetica", sans-serif;
+    font-size: 30px;
+    color: green;
+    text-align: center;
+    
+    width: 100%;
+    
+    
+    background-color: yellow;
+    border: 2px green solid;
+    box-sizing: border-box;
+
+}
+.wedding_box {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border: 2px solid yellow;
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+    margin-right: 25%;
+
+}
+.wedding_box .photos img {
+
+    width: 100%;
+    height: auto;
+    left: 0;
+}
+
+.show_text {
+    position: absolute;
+    left: 10px;
+    right: 2%;
+    bottom: 2%;
+    color: yellow;
+    text-align: center;
+    opacity: 0;
+    background-color: black;
+    transition: 1s ease-in-out;
+
+}
+.wedding_box:hover .show_text {
+    
+    opacity:0.8;
 
 }
 
