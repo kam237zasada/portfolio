@@ -8,7 +8,6 @@ body {
 }
 .content {
     background-image: url("images/background.jpg");
-    margin: 0 10% 0 10%;
     border-left: 1px solid black;
     border-right: 1px solid black;
     background-size: cover;
@@ -16,12 +15,14 @@ body {
 }
 
 section {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .section_header {
     font-size: 45px;
-    color: #202020;
+    background: linear-gradient(45deg,#641381, #A2A269);
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
     text-align: center;
     font-style: italic;
     font-weight: bold;
@@ -52,11 +53,11 @@ div {
 
 }
 
-.button {
+.menu_button {
     
     font-size: 16px;
     font-weight: bold;
-    max-width: 80px;
+    max-width: 150px;
     
 
 
@@ -65,7 +66,7 @@ div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     position: absolute;
-    top: 10px;
+    top: 7px;
     right: 20px;
 
 
@@ -97,12 +98,16 @@ div {
 
 
 .welcome_image {
-   
-    height: 450px;
+    height: 400px;
+
     background-image: url("images/welcome.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
+    border: 2px solid black;
+    display:flex;
+    justify-content: center;
+
    
     
 }
@@ -111,53 +116,47 @@ div {
     
 
 .textbox1 {
-    transform: translateY(100px);
+    color: black;
+    background-color: gold;
+    width: 350px;
+    align-self: center;
+    opacity: 0.7;
     
 }
 
-.textbox2 {
-    transform: translateY(300px);
-    background-color: silver;
-
-}
 
 
 
 #title {
-    font-size: 70px;
-    color: silver;
+    font-size: 50px;
     font-family: "Helvetica", sans-serif;
     text-align: center;
-    
-}
-#title_2 {
-    font-size: 40px;
-    color: gold;
-    font-family: "Helvetica", sans-serif;
-    text-align: center;
-    
 }
 
 .aboutme_box {
-    margin-left: 15%;
     padding: 10px;
     border: 3px solid black;
     background-color: white;
-    
-    
+    width: 80%;
+    margin-left: 10%;
+    background-color: #222222;
+    border-radius: 10px;
     display: flex;
-    width: 70%;
     flex-wrap:wrap;
-    justify-content: space-around;
+    justify-content: center;
+    align-content: flex-start;
 
     
 }
 .personal {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 220px;
-    
-    flex: 100%, 1, 1;
+    grid-template-columns: repeat(2,1fr);
+    width: 25%;
+    min-width: 260px;
+    background-color: #641381;
+    border-radius:10px;
+    padding: 30px;
+    height: 200px;
     
     
     
@@ -166,45 +165,65 @@ div {
 .personal > div {
     font-weight: bold;
     font-family: "Helvetica", sans-serif;
-    color: black;
+    color:white;
 
 }
+.personal .first {
+    text-align: right;
+}
 .personal .second {
-    color: green;
+    color:gold;
     font-family: "Helvetica", sans-serif;
+    text-align: left;
 
 }
 .description {
     
-    text-align: justify;
+    word-wrap: wrap;
     align-self: stretch;
-    border: 2px green solid;
     height: 200px;
-    width: 300px;
-    flex: 100%, 1, 1;
+    min-width: 250px;
+    max-height: 300px;
+    max-width: 600px;
     word-wrap: break-word;
+    padding-left: 30px;
+    background-color: #641381;
+    border-radius:10px;
+    color: gold;
+    font-weight: bold;
+    align-self: flex-start;
 }
 
 
 .photo {
-    width: 100px;
-    height: 150px; 
-    background-image: url("images/photo.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 20px;
-    align-self: center;
+    width: 10%;
+    height: 200px;
+    border-radius: 10px;
+    text-align: right;
     order: -1;
-    flex: 100%, 1, 1;
-    
+    min-width: 150px;
+}
+.photo img {
+    width: 100px;
+    height: auto;
+    box-shadow: 5px 5px gray; 
+    border-radius: 10px; 
+    position:relative;
+    top: 30px;  
+
+}
+.aboutme_box > div {
+    margin: 10px;
+    box-shadow: 5px 5px gray;
+
+}
+.aboutme_box .photo {
+    box-shadow: none;
 }
 
 .gallery_box {
     margin: 20px;
     padding: 10px;
-    
-    
-    height: 400px;
     display: flex;
     flex-wrap:wrap;
     justify-content: space-around;
@@ -218,6 +237,7 @@ width: 45%;
 min-width: 200px;
 align-self: center;
 flex-grow: 1;
+position:relative;
 
 
 }
@@ -227,9 +247,23 @@ flex-grow: 1;
     height: auto;
     position:relative;
     left: 5%;
-    
-   
+}
 
+
+.overlay_text_photo {
+position:absolute;    
+bottom: 40%;
+width:90%;
+left: 5%;
+text-align:center;
+font-size: 25px;
+font-family: "Helvetica", sans-serif;
+background-color: #641381;
+opacity:0;
+transition: 0.5s ease-in-out;
+}
+.link_photos:hover .overlay_text_photo {
+    opacity: 1;
 }
 
 .videos {
@@ -238,6 +272,7 @@ flex-grow: 1;
     min-width: 200px;
     align-self: center;
     flex-grow:1;
+    position:relative;
     
 }
 .videos img {
@@ -245,11 +280,24 @@ flex-grow: 1;
     height: auto;
     position:relative;
     left: 5%;
-   
-    
-   
-
 }
+.overlay_text_video {
+    position:absolute;    
+    bottom: 40%;
+    width:90%;
+    left: 5%;
+    text-align:center;
+    font-size: 25px;
+    font-family: "Helvetica", sans-serif;
+    background-color: #641381;
+    opacity:0;
+    transition: 0.5s ease-in-out;
+}
+.link_videos:hover .overlay_text_video {
+    opacity: 1;
+}
+
+
 #photos {
     font-family: "Helvetica", sans-serif;
     font-size: 30px;
@@ -278,39 +326,105 @@ flex-grow: 1;
     box-sizing: border-box;
 
 }
-.wedding_box {
+.whatido_box {
     display: flex;
     justify-content: center;
+    height: auto;
+    flex-wrap: wrap;
+
+
+}
+.item {
+    margin: 30px;
     position: relative;
-    border: 2px solid yellow;
-    width: 50%;
-    height: auto;
-    margin-left: 25%;
-    margin-right: 25%;
+    transition: transform 1s ease-in-out;
 
 }
-.wedding_box .photos img {
 
-    width: 100%;
-    height: auto;
-    left: 0;
+.whatido_box img {
+    height: 300px;
+    width: auto;
 }
-
 .show_text {
     position: absolute;
-    left: 10px;
-    right: 2%;
-    bottom: 2%;
-    color: yellow;
+    font-family: "Helvetica", sans-serif;   
+    font-size: 25px; 
     text-align: center;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
     opacity: 0;
-    background-color: black;
+    background-color:#641381;
     transition: 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    color: gold;
+
 
 }
-.wedding_box:hover .show_text {
+.whatido_box > .item:hover .show_text {
     
     opacity:0.8;
+}
+.item:hover {
+    
+    transform: scale(0.8);
 
 }
+
+
+.contact_box{
+    background-color: #F9F997;
+    display:flex;
+    flex-wrap:wrap;
+    width: 80%;
+    height:100%;
+    margin-left: 10%;
+    }
+
+.data {
+    font-family: "Helvetica", sans-serif;
+    font-size: 20px;
+    background-color: #641381;
+    color: white;
+    border: solid black 2px;
+}
+.icon_mail {
+    padding: 30px;
+    color:yellow;
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+    transform: rotate(-45deg);
+}
+.form {
+    font-family: Arial, sans-serif;
+    margin-left: 20px;
+    
+}
+.social_media {
+    display:flex;
+}
+
+.input{
+    width: 200px;
+    border-radius: 5%;
+    box-shadow: 5px 5px gray;
+}
+
+.question  { height: 200px;
+    word-wrap: wrap;
+    text-align:top;
+    text-align:left;
+
+}
+.button {
+    background-color: #A2A269;
+    color: #641381;
+    border-radius:30%;
+    margin: 10px;
+padding: 10px;}
+
+
 

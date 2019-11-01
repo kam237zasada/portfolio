@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title></title>
@@ -9,15 +9,18 @@
     <meta name="author" content="Kamil Zasada">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fontello/css/fontello.css">
 </head>
 
-<body><section class="content"><header class="header">
+<body>
+<section class="content">
+
+<header class="header">
     <div class="container_buttons">
-        <div class="button">About me</div>
-        <div class="button">Gallery</div>
-        <div class="button">Wedding</div>
-        <div class="button">My music</div>
-        <div class="button">Contact</div>
+        <div class="menu_button">About me</div>
+        <div class="menu_button">Gallery</div>
+        <div class="menu_button">What I do</div>
+        <div class="menu_button">Contact</div>
     </div>
     <div class="container_icons">
         <div class="icon1 icon"></div>
@@ -28,8 +31,7 @@
 <section class="welcome">
     <div class="welcome_image">
     <div class="welcome_textbox textbox1" id="title">DJ KRULIKOS</div>
-    <div class="welcome_textbox textbox2" id="title_2">The Best Sound Experience in Your Life</div>
-</div>
+    </div>
 </section>
 
 <section class="about_me">
@@ -44,29 +46,67 @@
         </div>
         <div class="description">Hi! My name is Kamil. I am 24 years old! I am DJ. I love playing music and also creating music. Privately I am a running lover and husband of beautiful wife. </div>
         
-        <div class="photo"></div>
+        <div class="photo"><img src="css/images/photo.png"></div>
     </div>
 </section>
 
 <section class="gallery">
         <div class="section_header">GALLERY</div>
         <div class="gallery_box">
-            <div class="photos"><div id="photos">PHOTO</div><a href="photo.html" target="_blank"><img src="css/images/photo_1.jpg"></a></div>
-            <div class="videos"><div id="photos">VIDEO</div><a href="http://youtube.com" target="_blank"><img src="css/images/video.jpg"></a></div>
+            <div class="photos"><div id="photos">PHOTO</div><a class="link_photos"href="photo.html" target="_blank"><img src="css/images/photo_1.jpg" alt="Photos"><p class="overlay_text_photo"><i class="icon-camera"></i>Show More</p></a></div>
+            <div class="videos"><div id="photos">VIDEO</div><a class="link_videos" href="http://youtube.com" target="_blank"><img src="css/images/video.jpg" alt="Videos"><p class="overlay_text_video"><i class="icon-youtube"></i>Go to YT Channel</p></a></div>
         </div>
 
 </section>
 
-<section class="wedding">
-    <div class="section_header">WEDDING</div>
-        <div class="wedding_box">
-            <div class="photos"><img src="css/images/wedding.jpg"></div>
-            <div class="show_text">Do you need a professional DJ for your Wedding? I can create great atmosphere with the best music. Everybody would be dancing and having really great time. </div>
-        </div>
+<section class="whatido">
+    <div class="section_header">WHAT I DO</div>
+        <div class="whatido_box">
+            <div class="item wedding"><img src="css/images/wedding.jpg" alt="wedding">
+            <p class="show_text">Wedding</p></div>
+            <div class="item karaoke"><img src="css/images/karaoke.jpg">
+            <p class="show_text">Karaoke</p></div>
+            <div class="item party"><img src="css/images/party.jpg">
+            <p class="show_text">Party</p></div>
+            <div class="item newyearseve"><img src="css/images/newyearseve.jpg">
+            <p class="show_text">New Year's Eve</p></div>
+            <div class="item bacheloretteparty"><img src="css/images/bachelorette.jpg">
+            <p class="show_text">Bachelorette Party</p></div>
+                </div>
         
 
 </section>
+<section class="contact">
+    <div class="section_header">CONTACT</div>
+    <div class="contact_box">
+        <div class="data">
+            <div class="icon_mail"><i class="icon-mail-alt"></i></div><br>
+            ul. Główna 1/1<br>
+            50-000 Wrocław<br>
+            Telephone: +48 123 456 789<br>
+            E-mail: kam237zasada@wp.pl<br>
+            <br><br><br><br>
+            >>Social media<<
+            <div class="social_media">
+                <div class="icon icon1"></div>
+                <div class="icon icon2"></div>
+                <div class="icon icon3"></div>
+            </div>
+    </div>
+        <div class="form">
+           <strong>Have a question?</strong>
+            <form action="mailto:kam237zasada@wp.pl" method="post">
+                Name: <br><input class="input" type="text" name="name"><br>
+                E-mail:  <br> <input class=" input"type="text" name="email"><br>
+                Question:<br> <input class="input question"type="text" name="question"><br>
+                <input class="button" type="submit" value="Send">
+                <input class="button" type="reset" value="Reset">
 
+            </form>
+        </div>
+    </div>
+
+</section>
 </section>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
