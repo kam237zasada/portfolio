@@ -20,9 +20,7 @@ section {
 
 .section_header {
     font-size: 45px;
-    background: linear-gradient(45deg,#641381, #A2A269);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color:transparent;
+    color:#641381;
     text-align: center;
     font-style: italic;
     font-weight: bold;
