@@ -21,7 +21,7 @@ section {
 .section_header {
     font-size: 45px;
     background: linear-gradient(45deg,#641381, #A2A269);
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color:transparent;
     text-align: center;
     font-style: italic;
