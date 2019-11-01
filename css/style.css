@@ -6,7 +6,7 @@ body {
     background-color: #eee;
     
 }
-.content {
+#content {
     background-image: url("images/background.jpg");
     border-left: 1px solid black;
     border-right: 1px solid black;
@@ -33,7 +33,8 @@ section {
     height: 40px;
     position: sticky;
     top: 0px;
-    background-color: red;
+    z-index: 10;
+    opacity: 0.7;
 }
 
 div {
@@ -41,12 +42,9 @@ div {
 }
 .container_buttons {
     display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(5, 1fr);
-    max-width: 50%;
+    grid-template-columns: repeat(4, 1fr);
     height: 40px;
     position: absolute;
-    top: 15px;
     left: 10px;
    
     
@@ -57,10 +55,19 @@ div {
     
     font-size: 16px;
     font-weight: bold;
-    max-width: 150px;
+    width: 170px;
+    background-color: #641381;
+    border: 2px solid gold;
+    text-align:center;
+    color: gold;
+    font-weight: bold;
+    transition: 0.5s ease-in-out;
     
+}
 
-
+.menu_button:hover{
+    background-color: gold;
+    color: #641381;
 }
 .container_icons {
     display: grid;
@@ -119,8 +126,19 @@ div {
     color: black;
     background-color: gold;
     width: 350px;
+    position: relative;
     align-self: center;
     opacity: 0.7;
+    animation-name: djkrulikos;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    
+}
+
+@keyframes djkrulikos {
+    
+        0%{top: -400px;}
+        100%{top: 0px;}
     
 }
 
@@ -136,7 +154,6 @@ div {
 .aboutme_box {
     padding: 10px;
     border: 3px solid black;
-    background-color: white;
     width: 80%;
     margin-left: 10%;
     background-color: #222222;
@@ -145,8 +162,15 @@ div {
     flex-wrap:wrap;
     justify-content: center;
     align-content: flex-start;
+    animation-name: aboutme;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 
     
+}
+@keyframes aboutme {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
 .personal {
     display: grid;
@@ -157,11 +181,13 @@ div {
     border-radius:10px;
     padding: 30px;
     height: 200px;
-    
-    
-    
-    
+    opacity:0;
+    animation-name: item_aboutme;
+    animation-delay: 3s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;  
 }
+
 .personal > div {
     font-weight: bold;
     font-family: "Helvetica", sans-serif;
@@ -192,6 +218,11 @@ div {
     color: gold;
     font-weight: bold;
     align-self: flex-start;
+    opacity:0;
+    animation-name: item_aboutme;
+    animation-delay: 4s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
 
@@ -202,6 +233,15 @@ div {
     text-align: right;
     order: -1;
     min-width: 150px;
+    opacity:0;
+    animation-name: item_aboutme;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes item_aboutme {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
 .photo img {
     width: 100px;
@@ -301,28 +341,22 @@ transition: 0.5s ease-in-out;
 #photos {
     font-family: "Helvetica", sans-serif;
     font-size: 30px;
-    color: green;
+    color:gold;
     text-align: center;
-    
     width: 100%;
-    
-    
-    background-color: yellow;
-    border: 2px green solid;
+    background-color:#641381;
+    border: 1px solid black;
     box-sizing: border-box;
 
 }
 #videos {
     font-family: "Helvetica", sans-serif;
     font-size: 30px;
-    color: green;
+    color: gold;
     text-align: center;
-    
     width: 100%;
-    
-    
-    background-color: yellow;
-    border: 2px green solid;
+    background-color: #641381;
+    border: 1px solid black;
     box-sizing: border-box;
 
 }
@@ -344,6 +378,8 @@ transition: 0.5s ease-in-out;
 .whatido_box img {
     height: 300px;
     width: auto;
+    border-radius: 10px;
+
 }
 .show_text {
     position: absolute;
@@ -360,6 +396,7 @@ transition: 0.5s ease-in-out;
     width: 100%;
     height: 100%;
     color: gold;
+    border-radius: 10px;
 
 
 }
