@@ -3,8 +3,6 @@ padding:0;}
 
 body {
     background-image: url("images/background.jpg");
-    border-left: 1px solid black;
-    border-right: 1px solid black;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -26,44 +24,59 @@ section {
     height: 40px;
     position: sticky;
     top: 0px;
-    z-index: 10;
+    z-index: 1;
     opacity: 0.7;
+    background-color: rgb(63, 8, 47);
 }
+
 
 div {
     font-family: "Courier New", serif;
 }
 .container_buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    height: 40px;
-    position: absolute;
-    left: 10px;
-   
-    
-
+    display: flex;
+    min-height: 40px;
+    flex-wrap: wrap;
+    width: 70%;
 }
 
-.menu_button {
+.menu_button div{
+width: 100%;
+position: absolute;
+top: 50%;
+transform: translate(0, -50%);
+
+
+    
+}
+.menu_button{
     
     font-size: 16px;
+    height: 40px;
     font-weight: bold;
-    width: 170px;
+    width: 25%;
+    min-width: 100px;
     background-color: #641381;
     border: 2px solid gold;
-    text-align:center;
+    text-align: center;
     color: gold;
     font-weight: bold;
     transition: 0.5s ease-in-out;
+    text-decoration: none; 
+    position:relative;
+    box-sizing: border-box;
     
+      
 }
 
 .menu_button:hover{
     background-color: gold;
     color: #641381;
+    border: 2px solid #641381;
 }
 .container_icons {
     display: grid;
+    grid-gap: 2px;
     grid-template-columns: repeat(3, 1fr);
     position: absolute;
     top: 7px;
@@ -99,16 +112,12 @@ div {
 
 .welcome_image {
     height: 400px;
-
     background-image: url("images/welcome.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
-    border: 2px solid black;
     display:flex;
     justify-content: center;
-
-   
     
 }
 
@@ -136,8 +145,6 @@ div {
 }
 
 
-
-
 #title {
     font-size: 50px;
     font-family: "Helvetica", sans-serif;
@@ -146,92 +153,107 @@ div {
 
 .aboutme_box {
     padding: 10px;
-    border: 3px solid black;
     width: 80%;
     margin-left: 10%;
-    background-color: #222222;
     border-radius: 10px;
     display: flex;
-    flex-wrap:wrap;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;;
     align-content: flex-start;
-    animation-name: aboutme;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-
     
 }
-@keyframes aboutme {
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-}
-.personal {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    width: 25%;
-    min-width: 260px;
-    background-color: #641381;
+.container {
+    background-color: #222222;
+    display:flex;
+    flex-wrap: wrap;
     border-radius:10px;
-    padding: 30px;
-    height: 200px;
-    opacity:0;
-    animation-name: item_aboutme;
-    animation-delay: 3s;
+    width: 400px;
+    align-items: center;
+    justify-items: center;
+    animation-name: borders;
     animation-duration: 1s;
-    animation-fill-mode: forwards;  
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
 
-.personal > div {
-    font-weight: bold;
-    font-family: "Helvetica", sans-serif;
-    color:white;
-
-}
-.personal .first {
-    text-align: right;
-}
-.personal .second {
-    color:gold;
-    font-family: "Helvetica", sans-serif;
-    text-align: left;
-
-}
 .description {
-    
-    word-wrap: wrap;
-    align-self: stretch;
+    background-color: #222222;
+    font-family: "Helvetica", sans-serif;
+    width: 400px;
     height: 200px;
-    min-width: 250px;
-    max-height: 300px;
-    max-width: 600px;
+    padding: 10px;
     word-wrap: break-word;
-    padding-left: 30px;
-    background-color: #641381;
     border-radius:10px;
     color: gold;
     font-weight: bold;
-    align-self: flex-start;
-    opacity:0;
-    animation-name: item_aboutme;
-    animation-delay: 4s;
+    text-align:justify;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: borders;
     animation-duration: 1s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
+    opacity: 0;
 }
 
+@keyframes borders {
+    0%{opacity: 0;}
+    100%{opacity: 1}
+}
 
 .photo {
     width: 10%;
-    height: 200px;
     border-radius: 10px;
-    text-align: right;
-    order: -1;
-    min-width: 150px;
+    padding: 10px;
+    text-align: center;
+    min-width: 100px;
     opacity:0;
     animation-name: item_aboutme;
     animation-delay: 2s;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
+
+
+.personal {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+    height: 200px;
+    min-width: 240px;
+    opacity:0;
+    animation-name: item_aboutme;
+    animation-delay: 3s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; 
+    padding: 5px;
+    height: 100px;
+    }
+    .text {
+        font-family: "Helvetica", sans-serif;
+        line-height:1.5;
+        animation-name: item_aboutme;
+    animation-delay: 4s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity:0;
+
+    }
+
+.personal div {
+    font-weight: bold;
+    font-family: "Helvetica", sans-serif;
+    color:white;
+    width: 100%;
+    text-justify: left;
+
+}
+.paragraph > span {
+    color: gold;
+}
+
 @keyframes item_aboutme {
     0%{opacity: 0;}
     100%{opacity: 1;}
@@ -239,20 +261,16 @@ div {
 .photo img {
     width: 100px;
     height: auto;
-    box-shadow: 5px 5px gray; 
-    border-radius: 10px; 
-    position:relative;
-    top: 30px;  
-
+    border-radius: 10%; 
 }
 .aboutme_box > div {
     margin: 10px;
     box-shadow: 5px 5px gray;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
 
 }
-.aboutme_box .photo {
-    box-shadow: none;
-}
+
 
 .gallery_box {
     margin: 20px;
@@ -278,7 +296,7 @@ position:relative;
 .photos img {
     width: 90%;
     height: auto;
-    position:relative;
+    position: relative;
     left: 5%;
 }
 
@@ -406,56 +424,83 @@ transition: 0.5s ease-in-out;
 
 
 .contact_box{
-    background-color: #F9F997;
     display:flex;
     flex-wrap:wrap;
-    width: 80%;
     height:100%;
-    margin-left: 10%;
+    justify-content: center;
     }
 
 .data {
     font-family: "Helvetica", sans-serif;
-    font-size: 20px;
-    background-color: #641381;
-    color: white;
-    border: solid black 2px;
+    font-size: 12px;
+    width: 400px;
+    min-height: 300px;
+    background-color: gold;
+    color: black;
+    position: relative;
+    padding: 10px;
 }
 .icon_mail {
-    padding: 30px;
-    color:yellow;
+    padding: 5px;
+    color:black;
     font-size: 40px;
-    width: 100%;
-    text-align: center;
-    transform: rotate(-45deg);
-}
-.form {
-    font-family: Arial, sans-serif;
-    margin-left: 20px;
-    
 }
 .social_media {
     display:flex;
+    position: absolute;
+    bottom: 70px;
 }
+.data_text {
+    position: absolute;
+    bottom: 5px;
+
+}
+.form {
+    background-color: #641381;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    width: 400px;
+    color: gold;
+}
+.encourage {
+font-family: "Arial", sans-serif;
+font-size: 18px;
+font-weight: bold;
+}
+
 
 .input{
-    width: 200px;
-    border-radius: 5%;
+    width: 90%;
+    border-radius: 10px;
     box-shadow: 5px 5px gray;
+    margin-bottom: 7px;
+    font-size: 16px;
+    background-color: #eee;
+    padding: 5px;
+    color: #641381;
 }
 
-.question  { height: 200px;
+textarea  { height: 200px;
+    padding: 5px 5px;
     word-wrap: wrap;
-    text-align:top;
-    text-align:left;
+resize: none;
+font-family: Arial, sans-serif;
 
 }
 .button {
-    background-color: #A2A269;
+    background-color:gold;
     color: #641381;
-    border-radius:30%;
+    border-radius:10px;
     margin: 10px;
 padding: 10px;}
+
+.button:hover{
+ background-color:#641381;
+ color: gold;
+}
+.button:active{
+    transform: scale(0.9);
+}
 
 
 

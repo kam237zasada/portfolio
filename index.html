@@ -14,10 +14,10 @@
 <body>
 <header class="header">
     <div class="container_buttons">
-        <a href="#about_me"><div class="menu_button">About me</div></a>
-        <a href="#gallery"><div class="menu_button">Gallery</div></a>
-        <a href="#whatido"><div class="menu_button">What I do</div></a>
-        <a href="#contact"><div class="menu_button">Contact</div></a>
+        <a href="#about_me" class="menu_button"><div>About me</div></a>
+        <a href="#gallery" class="menu_button"><div>Gallery</div></a>
+        <a href="#whatido" class="menu_button"><div>What I do</div></a>
+        <a href="#contact" class="menu_button"><div>Contact</div></a>
     </div>
     <div class="container_icons">
         <a href="https://www.facebook.com/krukikor666" target="_blank"><div class="icon1 icon"></div></a>
@@ -29,23 +29,29 @@
     <div class="welcome_image">
     <div class="welcome_textbox textbox1" id="title">DJ KRULIKOS</div>
     </div>
-</sect>
+</section>
 
 <section id="about_me">
     <div class="section_header">ABOUT ME</div>
     <div class="aboutme_box">
+        <div class="container">
+            <div class="photo">            
+                    <img src="css/images/photo.png"></div>
+                
         <div class="personal">
-            <div class="first">Name: </div><div class="second">Kamil Zasada</div>
-            <div class="first">Age: </div><div class="second">24</div>
-            <div class="first">Phone: </div><div class="second">+48 123 456 789</div>
-            <div class="first">E-mail: </div><div class="second">kam237zasada@wp.pl</div>
-            
+                <div class="paragraph">Name: <span>Kamil Zasada</span></div>
+                <div class="paragraph">Age: <span>24</span></div>
+                <div class="paragraph">Phone: <span>+48 123 456 789</span></div>
+                <div class="paragraph">E-mail: <span>kam237zasada@wp.pl</span></div>
         </div>
-        <div class="description">Hi! My name is Kamil. I am 24 years old! I am DJ. I love playing music and also creating music. Privately I am a running lover and husband of beautiful wife. </div>
-        
-        <div class="photo"><img src="css/images/photo.png"></div>
     </div>
-</sect>
+        <div class="description">
+            <div class="text">Hi! My name is Kamil. I am 24 years old! I am DJ. I can change basic party to unforgettable party. If you don't believe please check photo gallery below and go to my YT channel! I love playing music and also creating music. Privately I am a running lover and husband of beautiful wife.</div> 
+        </div>
+        
+        
+    </div>
+</section>
 
 <section id="gallery">
         <div class="section_header">GALLERY</div>
@@ -75,27 +81,29 @@
 </section>
 <section id="contact">
     <div class="section_header">CONTACT</div>
-    <div class="contact_box">
-        <div class="data">
-            <div class="icon_mail"><i class="icon-mail-alt"></i></div><br>
-            ul. Główna 1/1<br>
-            50-000 Wrocław<br>
-            Telephone: +48 123 456 789<br>
-            E-mail: kam237zasada@wp.pl<br>
-            <br><br><br><br>
-            >>Social media<<
-            <div class="social_media">
-                    <a href="https://www.facebook.com/krukikor666" target="_blank"><div class="icon1 icon"></div></a>
-                    <a href="http://youtube.com" target="_blank"><div class="icon2 icon"></div></a>
-                    <a href="https://www.instagram.com/krulikos237/" target="_blank"><div class="icon3 icon"></div></a>
-            </div>
-    </div>
+         <div class="contact_box">
+                <div class="data">
+                    <div class="icon_mail"><i class="icon-mail-alt"></i></div><br>
+                    <div style="font-size:16px; font-weight:bold;">If you have any question just write to me! I promise I will response as quick as possible!</div>
+                        
+                        <div class="social_media">
+                        <a href="https://www.facebook.com/krukikor666" target="_blank"><div class="icon1 icon"></div></a>
+                        <a href="http://youtube.com" target="_blank"><div class="icon2 icon"></div></a>
+                        <a href="https://www.instagram.com/krulikos237/" target="_blank"><div class="icon3 icon"></div></a>
+                    </div>
+                        <div class="data_text">ul. Główna 1/1<br>
+                        50-000 Wrocław<br>
+                        Telephone: +48 123 456 789<br>
+                        E-mail: kam237zasada@wp.pl<br>
+                    </div>
+            
+        </div>
         <div class="form">
-           <strong>Have a question?</strong>
+            <div class="encourage">Write to us!</div>
             <form action="mailto:kam237zasada@wp.pl" method="post">
-                Name: <br><input class="input" type="text" name="name"><br>
-                E-mail:  <br> <input class=" input"type="text" name="email"><br>
-                Question:<br> <input class="input question"type="text" name="question"><br>
+                <br><input class="input" type="text" name="name" placeholder="Your Name"><br>
+                <br> <input class=" input"type="text" name="email" placeholder="Type Your E-mail"><br>
+                <br> <textarea class="input" placeholder="Your Message"></textarea><br>
                 <input class="button" type="submit" value="Send">
                 <input class="button" type="reset" value="Reset">
 
