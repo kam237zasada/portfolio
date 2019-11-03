@@ -10,13 +10,21 @@ body {
 section {
     margin-bottom: 100px;
 }
+.header_container {
+    display: flex;
+    justify-content: center;
+}
 
 .section_header {
     font-size: 45px;
-    color:#641381;
     text-align: center;
     font-style: italic;
     font-weight: bold;
+    color: gold;
+    background-color: #641381;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 5px 5px gray;
     
 } 
 .header {
@@ -428,6 +436,7 @@ transition: 0.5s ease-in-out;
     flex-wrap:wrap;
     height:100%;
     justify-content: center;
+    margin: 30px;
     }
 
 .data {
