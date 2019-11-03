@@ -243,10 +243,10 @@ transform: translate(0, -50%);
         font-family: "Helvetica", sans-serif;
         line-height:1.5;
         animation-name: item_aboutme;
-    animation-delay: 4s;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    opacity:0;
+        animation-delay: 4s;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        opacity:0;
 
     }
 
@@ -431,27 +431,27 @@ transition: 0.5s ease-in-out;
 }
 
 
-.contact_box{
+.contact_box {
     display:flex;
     flex-wrap:wrap;
-    height:100%;
+    height: 100%;
     justify-content: center;
     margin: 30px;
     }
 
 .data {
-    font-family: "Helvetica", sans-serif;
     font-size: 12px;
     width: 400px;
     min-height: 300px;
-    background-color: gold;
-    color: black;
+    background-color: #4D0F5A;
+    color: gold;
     position: relative;
     padding: 10px;
+    
 }
 .icon_mail {
     padding: 5px;
-    color:black;
+    color:gold;
     font-size: 40px;
 }
 .social_media {
@@ -470,12 +470,13 @@ transition: 0.5s ease-in-out;
     padding: 10px;
     width: 400px;
     color: gold;
+
 }
-.encourage {
-font-family: "Arial", sans-serif;
-font-size: 18px;
-font-weight: bold;
-}
+    .encourage {
+    font-family: "Arial", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    }
 
 
 .input{
